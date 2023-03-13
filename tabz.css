@@ -12,7 +12,7 @@
   }
 
   body{
-    font-family: 'Corben', cursive;
+    font-family: 'Montserrat Alternates', sans-serif;
     /*background-image: radial-gradient(circle, #051937, #123150, #234b68, #376780, #4e8397);*/
     /*background-image: linear-gradient(to bottom, #0f213d, #1d345c, #2d477e, #415ba0, #576fc4);*/
     /*background-image: linear-gradient(to bottom, #0f213d, #1b182c, #1b111d, #13080f, #000000);*/
@@ -20,11 +20,14 @@
     margin: 0;
     height: 100vh;
   }
+  .inactive{
+    display: none;
+  }
 
-  /*init bar*/
+  /*init nav*/
   
 nav{
-  font-family: 'Montserrat Alternates', sans-serif;
+  
   width: 100%;
   height: auto;
   border-bottom: 1px solid black;
@@ -35,13 +38,13 @@ nav{
   /*background-color: var(--terra);*/
 }
 
-.mob_menu{
+.mob_menu_button{
   grid-column: 1 / 2;
   margin: 0;
   display: none;
   cursor: pointer;
 }
-.mob_menu img{
+.mob_menu_button img{
   width: 40px;
 }
 
@@ -88,39 +91,69 @@ nav{
 .nav_right h3{
   margin-right: 24px;
 }
+  /*Fin nav*/
 
-@media (max-width: 640px) {
 
-  .opciones{
-      display: none;
-  }
-  .mob_menu {
-      display: block;
-      padding-right: 0;
-      position: relative;
-      left: -65px;
+  /*Inicia mob_menu*/
   
-  }
-  .nav_right h3{
-      display: none;
-  }
-  .title{
-      padding: 0;
-  }
-
-
+.container_mob_menu{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat Alternates', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: auto;
   
 }
 
+ul{
+  list-style: none;
+  padding: 0;
+}
 
-  /*Fin init*/
+.ops_mob_menu :nth-child(){
+  display: flex;
+}
+
+.ops_mob_menu li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ops_mob_menu li:hover{  
+  font-size: 20px;
+  transition: 0.05s ease-in;
+  cursor: pointer;
+}
+
+.ops_mob_menu li img:hover{
+  margin-right:5px;
+  transition: all 0.5s;
+  
+}
+
+.sesion_mob_menu p{
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.sesion_mob_menu p:hover{
+  transition: all 0.5s;
+  font-size: 18px;
+}
+
+  /*fin mob_menu*/
   
   
-    
+ /*Inicia cuerpo normal*/   
   .container{
     display: grid;
     grid-template:repeat(3,1fr)/repeat(10,1fr);
-   
+   box-sizing: border-box;
     gap: 2px;
   }
 
@@ -160,7 +193,7 @@ nav{
   a:hover{
     transition: all 0.5s;
     font-size: 20px;
-    transition: all 0.5s;
+    transition:0.5s ease-out;
     padding: 2px;
     
   }
@@ -178,14 +211,14 @@ nav{
     width: 236px;
     height: 200px;
     border-radius: 16px 40px;
-    transition: all 0.5s;
+    transition: 0.5s ease-out;
   }
 
   .img1 img:hover{
     cursor: pointer;
     width: 250px;
     height: 214px;
-    transition: all 0.5s;
+    transition:  0.5s ease-in-out;
     box-shadow: 0px 0px 92px -32px var(--terra);
     border-radius: 16px; ;
   }
@@ -196,6 +229,7 @@ nav{
     grid-row: 1 / 4;
     justify-content: center;
     align-items: center;
+    transition: 0.6s ease-in;
   }
 
   .vid2 iframe{
@@ -203,7 +237,7 @@ nav{
     border-radius: 20px 80px;
     object-fit: cover;
     object-position: 0 -100px;
-    transition: all 0.5s;
+    transition:  0.5s;
     
   }
   .vid2 iframe:hover{
@@ -398,6 +432,39 @@ nav{
     height: 415px;
     transition: all 1s;
     box-shadow: 0px 0px 92px -32px var(--terra);
+  }
+  /*Fin del cuerpo normal*/
+
+
+  @media (max-width: 640px) {
+
+    .container img{
+      display: none;
+    }
+    iframe{
+      display: none;
+    }
+
+
+    .opciones{
+        display: none;
+    }
+    .mob_menu_button {
+        display: block;
+        padding-right: 0;
+        position: relative;
+        left: -65px;
+    
+    }
+    .nav_right h3{
+        display: none;
+    }
+    .title{
+        padding: 0;
+    }
+  
+  
+    
   }
 
   /*

@@ -1,0 +1,58 @@
+
+.container_mob_menu{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.ops_mob_menu :nth-child(){
+    display: flex;
+}
+
+.ops_mob_menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ops_mob_menu li:hover{  
+    font-size: 20px;
+    transition: 0.05s ease-in;
+    cursor: pointer;
+}
+
+.ops_mob_menu li img:hover{
+    margin-right:5px;
+    transition: all 0.5s;
+    
+}
+
+.sesion_mob_menu p{
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.sesion_mob_menu p:hover{
+    transition: all 0.5s;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
