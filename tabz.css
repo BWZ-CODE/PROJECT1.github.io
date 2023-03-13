@@ -96,18 +96,16 @@ nav{
 
   /*Inicia mob_menu*/
   
-.container_mob_menu{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Montserrat Alternates', sans-serif;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: auto;
-  
+.Mob_menu{
+  position: absolute;
+  top: 9.5vh;
+  left: 5px;
+  background:white;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+
 }
 
 ul{
@@ -153,7 +151,7 @@ ul{
   .container{
     display: grid;
     grid-template:repeat(3,1fr)/repeat(10,1fr);
-   box-sizing: border-box;
+    box-sizing: border-box;
     gap: 2px;
   }
 
@@ -453,7 +451,7 @@ ul{
         display: block;
         padding-right: 0;
         position: relative;
-        left: -65px;
+        left: -50px;
     
     }
     .nav_right h3{
