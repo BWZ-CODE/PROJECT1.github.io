@@ -21,8 +21,6 @@ const isContPrClosed = containerinit.classList.toggle('inactive')
 if(!isContPrClosed){
     containerinit.classList.toggle('inactive');
 }
-
-
 function activeMobMenu(){
     mob_menu.classList.toggle('inactive');  
 }
